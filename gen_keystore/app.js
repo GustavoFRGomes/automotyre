@@ -38,9 +38,12 @@ const createKeystore = (keyAlias, storePassword, keyPassword) => {
     });
 }
 
-const exportCredentials = (keyAlias, storePassword, keyPassword) => {
+const exportCredentials = (keyAlias, storePassword, keyPassword, exportDirectory) => {
+    if (exportDirectory.charAt(exportDirectory.length -1) === '/')
+        exportDirectory = exportDirectory.substring(0, exportDirectory.length - 1)
+
     const exportingString = `Store Password: ${storePassword} \nKey Alias: ${keyAlias} \nKey Password: ${keyPassword}`
-    fs.writeFileSync("./keystore_details.txt", exportingString)
+    fs.writeFileSync(`${exportDirectory}/keystore_details.txt`, exportingString)
 }
 
 const main = (program) => {
