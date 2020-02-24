@@ -1,0 +1,17 @@
+{
+  "name": "gen_keystore",
+  "version": "1.0.0",
+  "description": "Script to randomly generate the passwords for an Android Keystore, and then generate the keystore itself, via the command line.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Gustavo F. R. Gomes",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^4.1.1",
+    "inquirer": "^7.0.4"
+  }
+}
